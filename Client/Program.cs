@@ -111,7 +111,7 @@ namespace Client
 
             var client = provider.GetService<Greeter.GreeterClient>();
 
-            using var call = client!.SayHelloDuplex(cancellationToken: cancellationToken);
+            var call = client!.SayHelloDuplex(cancellationToken: cancellationToken);
 
             var readTask = Task.Run(async () =>
             {
